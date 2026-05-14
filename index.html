@@ -1,524 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!-- ================= FEATURES SECTION ================= -->
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section class="features-section">
 
-<title>PawHaven - Pet Adoption</title>
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-/* ================= BODY ================= */
-
-body{
-margin:0;
-padding:0;
-font-family:Poppins,sans-serif;
-background:#f7f9fc;
-overflow-x:hidden;
-}
-
-/* ================= NAVBAR ================= */
-
-nav{
-background:linear-gradient(90deg,#ff7e5f,#feb47b);
-padding:18px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-nav h2{
-color:white;
-font-size:32px;
-margin:0;
-}
-
-nav div{
-display:flex;
-gap:30px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-size:17px;
-font-weight:600;
-transition:0.3s;
-}
-
-nav a:hover{
-opacity:0.8;
-}
-
-/* ================= HERO SECTION ================= */
-
-.hero-section{
-height:95vh;
-
-background:
-linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-url('https://images.unsplash.com/photo-1450778869180-41d0601e046e')
-center/cover no-repeat;
-
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-content{
-max-width:850px;
-}
-
-.hero-content h1{
-font-size:72px;
-color:white;
-margin-bottom:25px;
-line-height:1.2;
-font-weight:700;
-}
-
-.hero-content p{
-font-size:21px;
-line-height:1.9;
-color:#f3f3f3;
-margin-bottom:35px;
-}
-
-.hero-btn{
-display:inline-block;
-padding:18px 40px;
-background:linear-gradient(90deg,#ff7e5f,#ff6f61);
-color:white;
-text-decoration:none;
-border-radius:14px;
-font-size:18px;
-font-weight:600;
-transition:0.3s;
-box-shadow:0 10px 25px rgba(255,111,97,0.3);
-}
-
-.hero-btn:hover{
-transform:translateY(-5px);
-}
-
-/* ================= WELCOME SECTION ================= */
-
-.welcome-section{
-padding:100px 70px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:70px;
-flex-wrap:wrap;
-background:white;
-}
-
-.welcome-text{
-flex:1;
-min-width:320px;
-}
-
-.welcome-text h2{
-font-size:48px;
-margin-bottom:30px;
-color:#222;
-line-height:1.3;
-}
-
-.welcome-para{
-font-size:17px;
-line-height:2;
-color:#555;
-margin-bottom:20px;
-}
-
-.welcome-image{
-flex:1;
-min-width:320px;
-}
-
-.welcome-image img{
-width:100%;
-height:500px;
-object-fit:cover;
-border-radius:30px;
-box-shadow:0 15px 35px rgba(0,0,0,0.12);
-}
-
-/* ================= PET SECTION ================= */
-
-.pet-section{
-padding:100px 70px;
-background:#f7f9fc;
-}
-
-.pet-section h2{
-text-align:center;
-font-size:48px;
-margin-bottom:70px;
-color:#222;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:35px;
-}
-
-.card{
-background:white;
-border-radius:25px;
-overflow:hidden;
-text-decoration:none;
-color:#333;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 18px 35px rgba(0,0,0,0.12);
-}
-
-.card img{
-width:100%;
-height:270px;
-object-fit:cover;
-}
-
-.card h3{
-font-size:28px;
-margin:24px 24px 10px;
-color:#222;
-}
-
-.card p{
-font-size:15px;
-line-height:1.9;
-color:#666;
-margin:0 24px 30px;
-}
-
-/* ================= WHY SECTION ================= */
-
-.why-section{
-padding:100px 70px;
-background:#fff7f5;
-}
-
-.why-section h2{
-text-align:center;
-font-size:46px;
-margin-bottom:70px;
-color:#222;
-}
-
-.why-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:35px;
-}
-
-.why-box{
-background:white;
-padding:45px 35px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.why-box:hover{
-transform:translateY(-8px);
-}
-
-.why-box h3{
-font-size:25px;
-margin-bottom:18px;
-color:#ff6f61;
-}
-
-.why-box p{
-line-height:2;
-color:#666;
-font-size:15px;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-background:#222;
-padding:28px;
-text-align:center;
-}
-
-footer p{
-color:white;
-font-size:15px;
-margin:0;
-letter-spacing:0.5px;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:768px){
-
-nav{
-padding:15px 20px;
-flex-direction:column;
-gap:12px;
-}
-
-nav h2{
-font-size:28px;
-}
-
-nav div{
-gap:18px;
-}
-
-.hero-section{
-height:auto;
-padding:130px 20px;
-}
-
-.hero-content h1{
-font-size:42px;
-}
-
-.hero-content p{
-font-size:16px;
-}
-
-.hero-btn{
-padding:14px 30px;
-font-size:16px;
-}
-
-.welcome-section,
-.pet-section,
-.why-section{
-padding:70px 20px;
-}
-
-.welcome-text h2,
-.pet-section h2,
-.why-section h2{
-font-size:34px;
-}
-
-.welcome-image img{
-height:350px;
-}
-
-.card img{
-height:240px;
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<!-- ================= NAVBAR ================= -->
-
-<nav>
-
-<h2>🐾 PawHaven</h2>
-
-<div>
-
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-
-</div>
-
-</nav>
-
-<!-- ================= HERO SECTION ================= -->
-
-<section class="hero-section">
-
-<div class="hero-content">
-
-<h1>Find Your Forever Friend 🐾</h1>
-
-<p>
-
-Adopt loving dogs and cats looking for a safe,
-happy, and caring forever home.
-
-Bring home unconditional love today ❤️
-
-</p>
-
-<a href="#pets" class="hero-btn">
-
-Explore Pets
-
-</a>
-
-</div>
-
-</section>
-
-<!-- ================= WELCOME SECTION ================= -->
-
-<section class="welcome-section">
-
-<div class="welcome-text">
-
-<h2>Welcome to PawHaven 🐶🐱</h2>
-
-<p class="welcome-para">
-
-At <b>PawHaven</b>, we believe every pet deserves
-a loving home, endless care, and a family that
-will cherish them forever ❤️
-
-</p>
-
-<p class="welcome-para">
-
-We rescue and support homeless dogs and cats,
-helping them find safe, happy, and caring homes
-filled with warmth, comfort, and love.
-
-</p>
-
-<p class="welcome-para">
-
-Our mission is to connect kind-hearted families
-with adorable pets who are waiting for their
-perfect forever home 🐾
-
-</p>
-
-</div>
-
-<div class="welcome-image">
-
-<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
-
-</div>
-
-</section>
-
-<!-- ================= PET SECTION ================= -->
-
-<section class="pet-section" id="pets">
-
-<h2>Available Pets 🐾</h2>
-
-<div class="cards">
-
-<a href="rocky.html" class="card">
-<img src="https://images.unsplash.com/photo-1558788353-f76d92427f16">
-<h3>Rocky</h3>
-<p>Friendly Labrador who loves adventures and playtime.</p>
-</a>
-
-<a href="lucy.html" class="card">
-<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
-<h3>Lucy</h3>
-<p>Sweet and adorable Pug who loves cuddles and relaxing.</p>
-</a>
-
-<a href="max.html" class="card">
-<img src="https://images.unsplash.com/photo-1552053831-71594a27632d">
-<h3>Max</h3>
-<p>Loyal Golden Retriever with a loving personality.</p>
-</a>
-
-<a href="daisy.html" class="card">
-<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b">
-<h3>Daisy</h3>
-<p>Cute Shih Tzu who enjoys cuddles and attention.</p>
-</a>
-
-<a href="simba.html" class="card">
-<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
-<h3>Simba</h3>
-<p>Fluffy Persian cat with a calm and loving nature.</p>
-</a>
-
-<a href="milo.html" class="card">
-<img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6">
-<h3>Milo</h3>
-<p>Playful kitten full of energy and happiness.</p>
-</a>
-
-<a href="leo.html" class="card">
-<img src="https://images.unsplash.com/photo-1574158622682-e40e69881006">
-<h3>Leo</h3>
-<p>Active Bengal cat who loves exploring around.</p>
-</a>
-
-<a href="kitty.html" class="card">
-<img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4">
-<h3>Kitty</h3>
-<p>Gentle Siamese cat who loves cozy naps.</p>
-</a>
-
-</div>
-
-</section>
-
-<!-- ================= WHY ADOPT ================= -->
-
-<section class="why-section">
-
-<h2>Why Adopt From PawHaven? ❤️</h2>
+<h2>Smart PawHaven Features 🐾</h2>
 
 <div class="why-container">
 
 <div class="why-box">
 
-<h3>🐾 Rescue & Care</h3>
+<h3>📍 Geo-location Services</h3>
 
 <p>
-
-Every pet receives proper food, shelter,
-medical care, and love before adoption.
-
+Find nearby pet shelters and adoption
+centers easily based on your location.
 </p>
 
 </div>
 
 <div class="why-box">
 
-<h3>🏡 Forever Homes</h3>
+<h3>💬 Real-time Chat</h3>
 
 <p>
-
-We help pets find caring families
-and safe forever homes filled with happiness.
-
+Connect instantly with shelter authorities
+for guidance and adoption support.
 </p>
 
 </div>
 
 <div class="why-box">
 
-<h3>❤️ Trusted Adoption</h3>
+<h3>🤖 AI Pet Recommendation</h3>
 
 <p>
-
-Simple, safe, and responsible
-pet adoption process for everyone.
-
+Get smart pet suggestions according to
+your lifestyle and preferences.
 </p>
 
 </div>
@@ -529,15 +45,98 @@ pet adoption process for everyone.
 
 <!-- ================= FOOTER ================= -->
 
-<footer>
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- ABOUT -->
+
+<div class="footer-box">
+
+<h2 class="logo">🐾 PawHaven</h2>
 
 <p>
-
-© PawHaven 2026 | Made with ❤️ for pets
-
+Helping adorable pets find safe,
+loving, and happy forever homes.
 </p>
 
-</footer>
+<p class="quote">
+“Adopt Don’t Shop ❤️”
+</p>
 
-</body>
-</html>
+<!-- SOCIAL ICONS -->
+
+<div class="social-icons">
+
+<a href="https://instagram.com" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://facebook.com" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://twitter.com" target="_blank">
+<i class="fab fa-twitter"></i>
+</a>
+
+</div>
+
+</div>
+
+<!-- QUICK LINKS -->
+
+<div class="footer-box">
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="footer-box">
+
+<h3>Contact</h3>
+
+<p>📧 pawhaven@gmail.com</p>
+
+<p>📞 +91 7262028686</p>
+
+<p>
+📍 Pune, Maharashtra, India
+</p>
+
+<!-- GOOGLE MAP LOCATION -->
+
+<iframe
+src="https://www.google.com/maps?q=Pune,Maharashtra&output=embed"
+width="100%"
+height="150"
+style="border:0;border-radius:15px;margin-top:15px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+<button class="donate-btn">
+Donate for Pets
+</button>
+
+</div>
+
+</div>
+
+<!-- BOTTOM -->
+
+<div class="footer-bottom">
+
+© 2026 PawHaven | All Rights Reserved
+
+</div>
+
+</footer>
