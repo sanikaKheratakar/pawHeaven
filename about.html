@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us - PawHaven</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ================= BODY ================= */
+
+body{
+margin:0;
+padding:0;
+font-family:Poppins,sans-serif;
+background:#f7f9fc;
+overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+background:linear-gradient(90deg,#ff7e5f,#feb47b);
+padding:18px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav h2{
+color:white;
+font-size:32px;
+margin:0;
+}
+
+nav div{
+display:flex;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:17px;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:0.8;
+}
+
+/* ================= HERO ================= */
+
+.about-hero{
+height:75vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url('https://images.unsplash.com/photo-1450778869180-41d0601e046e')
+center/cover no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.about-hero h1{
+font-size:72px;
+color:white;
+line-height:1.2;
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about-section{
+padding:100px 70px;
+background:white;
+}
+
+.about-flex{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:70px;
+flex-wrap:wrap;
+margin-bottom:100px;
+}
+
+.about-text{
+flex:1;
+min-width:320px;
+}
+
+.about-title{
+font-size:46px;
+margin-bottom:30px;
+color:#222;
+position:relative;
+display:inline-block;
+padding-bottom:10px;
+}
+
+.about-title::after{
+content:'';
+position:absolute;
+left:0;
+bottom:0;
+width:90px;
+height:5px;
+background:#ff6f61;
+border-radius:10px;
+}
+
+.highlight-box{
+background:#fff7f5;
+padding:35px;
+border-radius:28px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+border-left:8px solid #ff6f61;
+}
+
+.highlight-box p{
+font-size:17px;
+line-height:2;
+color:#555;
+margin-bottom:18px;
+}
+
+.highlight-box b{
+color:#ff6f61;
+}
+
+.about-image{
+flex:1;
+min-width:320px;
+}
+
+.about-image img{
+width:100%;
+height:520px;
+object-fit:cover;
+border-radius:30px;
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* ================= WHY SECTION ================= */
+
+.why-section{
+padding:100px 70px;
+background:#fff7f5;
+}
+
+.why-heading{
+text-align:center;
+font-size:48px;
+margin-bottom:70px;
+color:#222;
+}
+
+.why-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.why-box{
+background:white;
+padding:40px 35px;
+border-radius:28px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.why-box:hover{
+transform:translateY(-8px);
+}
+
+.why-box img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:20px;
+margin-bottom:22px;
+}
+
+.why-box h3{
+font-size:25px;
+margin-bottom:18px;
+color:#ff6f61;
+}
+
+.why-box p{
+font-size:15px;
+line-height:1.9;
+color:#666;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#222;
+padding:28px;
+text-align:center;
+}
+
+footer p{
+color:white;
+font-size:15px;
+margin:0;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+nav{
+padding:15px 20px;
+flex-direction:column;
+gap:12px;
+}
+
+nav h2{
+font-size:28px;
+}
+
+nav div{
+gap:18px;
+}
+
+.about-hero{
+height:60vh;
+}
+
+.about-hero h1{
+font-size:42px;
+}
+
+.about-section,
+.why-section{
+padding:70px 20px;
+}
+
+.about-title,
+.why-heading{
+font-size:34px;
+}
+
+.about-image img{
+height:350px;
+}
+
+.highlight-box{
+padding:25px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+<h2>🐾 PawHaven</h2>
+
+<div>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="about-hero">
+
+<h1>About PawHaven 🐾</h1>
+
+</section>
+
+<!-- ================= WHO WE ARE ================= -->
+
+<section class="about-section">
+
+<div class="about-flex">
+
+<div class="about-text">
+
+<h2 class="about-title">Who We Are 🐶🐱</h2>
+
+<div class="highlight-box">
+
+<p>
+
+At <b>PawHaven</b>, we are passionate animal lovers
+dedicated to helping rescued and homeless pets
+find safe and loving forever homes ❤️
+
+</p>
+
+<p>
+
+We believe every dog and cat deserves kindness,
+care, protection, and a family that will love them forever.
+
+</p>
+
+<p>
+
+Our platform connects caring families with adorable pets
+who are waiting for a second chance at life 🐾
+
+</p>
+
+</div>
+
+</div>
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b">
+
+</div>
+
+</div>
+
+<!-- ================= OUR MISSION ================= -->
+
+<div class="about-flex">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
+
+</div>
+
+<div class="about-text">
+
+<h2 class="about-title">Our Mission ❤️</h2>
+
+<div class="highlight-box">
+
+<p>
+
+Our mission is to promote pet adoption
+and reduce the number of homeless animals.
+
+</p>
+
+<p>
+
+We spread awareness about responsible pet care
+and encourage adoption instead of buying pets.
+
+</p>
+
+<p>
+
+Through love, compassion, and care,
+we aim to create happy homes for every rescued pet 🏡
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY ADOPT ================= -->
+
+<section class="why-section">
+
+<h2 class="why-heading">Why Adopt From PawHaven? ❤️</h2>
+
+<div class="why-container">
+
+<div class="why-box">
+
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+
+<h3>🐾 Rescue & Care</h3>
+
+<p>
+
+Every pet receives food,
+medical support, shelter, and love before adoption.
+
+</p>
+
+</div>
+
+<div class="why-box">
+
+<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+
+<h3>🏡 Forever Homes</h3>
+
+<p>
+
+We help rescued pets find caring families
+and safe forever homes filled with happiness.
+
+</p>
+
+</div>
+
+<div class="why-box">
+
+<img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e">
+
+<h3>❤️ Trusted Adoption</h3>
+
+<p>
+
+Safe, simple, and responsible
+pet adoption process for everyone.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= REVIEWS SECTION ================= -->
+
+<section class="reviews">
+
+    <h1 class="review-title">
+        Happy Adoption Stories 🐾
+    </h1>
+
+    <div class="review-container">
+
+        <!-- REVIEW 1 -->
+        <div class="review-card">
+
+            <img src="images/user1.jpg" class="user-img">
+
+            <h3>Priya & Bruno</h3>
+
+            <p class="pet-name">⭐ ⭐ ⭐ ⭐ ⭐</p>
+
+            <p>
+                “Bruno became the happiest part of our family.
+                The adoption process was smooth and very caring.
+                Thank you PawHaven ❤️”
+            </p>
+
+        </div>
+
+        <!-- REVIEW 2 -->
+        <div class="review-card">
+
+            <img src="images/user2.jpg" class="user-img">
+
+            <h3>Rohan Mehta</h3>
+
+            <p class="pet-name">⭐ ⭐ ⭐ ⭐ ⭐</p>
+
+            <p>
+                “I never thought adopting a pet would change my
+                life this much. Luna is now my best friend 🐱”
+            </p>
+
+        </div>
+
+        <!-- REVIEW 3 -->
+        <div class="review-card">
+
+            <img src="images/user3.jpg" class="user-img">
+
+            <h3>Ananya & Coco</h3>
+
+            <p class="pet-name">⭐ ⭐ ⭐ ⭐ ⭐</p>
+
+            <p>
+                “Very trustworthy website and genuine people.
+                Coco settled into our home in just 2 days!”
+            </p>
+
+        </div>
+
+        <!-- REVIEW 4 -->
+        <div class="review-card">
+
+            <img src="images/user4.jpg" class="user-img">
+
+            <h3>Sneha Patil</h3>
+
+            <p class="pet-name">⭐ ⭐ ⭐ ⭐ ⭐</p>
+
+            <p>
+                “The team guided us throughout the adoption.
+                Max is healthy, playful, and loved by everyone
+                in our house 🐶”
+            </p>
+
+        </div>
+
+        <!-- REVIEW 5 -->
+        <div class="review-card">
+
+            <img src="images/user5.jpg" class="user-img">
+
+            <h3>Aryan Sharma</h3>
+
+            <p class="pet-name">⭐ ⭐ ⭐ ⭐ ⭐</p>
+
+            <p>
+                “I adopted Oreo last month and the experience
+                was amazing. Highly recommend PawHaven for pet
+                adoption.”
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= FOOTER ================= -->
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- ABOUT -->
+        <div class="footer-box">
+            <h2 class="logo">🐾 PawHaven</h2>
+
+            <p>
+                Helping adorable pets find safe, loving,
+                and happy forever homes.
+            </p>
+
+            <p class="quote">
+                “Adopt Don’t Shop ❤️”
+            </p>
+
+            <!-- SOCIAL ICONS -->
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#">Adopt Pets</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+            <h3>Contact</h3>
+
+            <p>📧 pawhaven@gmail.com</p>
+            <p>📞 +917262028686 </p>
+            <p>📍 Pune, Maharashtra, India</p>
+
+            <button class="donate-btn">
+                Donate for Pets
+            </button>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        © 2026 PawHaven | All Rights Reserved
+    </div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us - PawHaven</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+margin:0;
+padding:0;
+font-family:Poppins,sans-serif;
+background:#f7f9fc;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+background:linear-gradient(90deg,#ff7e5f,#feb47b);
+padding:18px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav h2{
+color:white;
+font-size:32px;
+margin:0;
+}
+
+nav div{
+display:flex;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:17px;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:0.8;
+}
+
+/* HERO */
+
+.contact-hero{
+height:60vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url('https://images.unsplash.com/photo-1450778869180-41d0601e046e')
+center/cover no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.contact-hero h1{
+font-size:65px;
+color:white;
+line-height:1.2;
+}
+
+/* CONTACT SECTION */
+
+.contact-section{
+padding:90px 70px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:70px;
+flex-wrap:wrap;
+background:white;
+}
+
+.contact-info{
+flex:1;
+min-width:320px;
+}
+
+.contact-info h2{
+font-size:46px;
+margin-bottom:25px;
+color:#222;
+}
+
+.contact-info p{
+font-size:17px;
+line-height:2;
+color:#555;
+margin-bottom:18px;
+}
+
+.contact-image{
+flex:1;
+min-width:320px;
+}
+
+.contact-image img{
+width:100%;
+height:500px;
+object-fit:cover;
+border-radius:30px;
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* FORM */
+
+.contact-form-box{
+max-width:720px;
+margin:0 auto 90px;
+background:white;
+padding:45px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form-box h2{
+text-align:center;
+font-size:38px;
+margin-bottom:35px;
+color:#222;
+}
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+padding:18px;
+border-radius:14px;
+border:1px solid #ddd;
+font-size:16px;
+font-family:Poppins,sans-serif;
+outline:none;
+transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus{
+border-color:#ff6f61;
+box-shadow:0 0 10px rgba(255,111,97,0.2);
+}
+
+.contact-form textarea{
+resize:none;
+}
+
+.contact-form button{
+padding:18px;
+border:none;
+border-radius:14px;
+background:linear-gradient(90deg,#ff7e5f,#ff6f61);
+color:white;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+transform:translateY(-3px);
+}
+
+/* FOOTER */
+
+footer{
+background:#222;
+padding:28px;
+text-align:center;
+margin-top:60px;
+}
+
+footer p{
+color:white;
+font-size:15px;
+margin:0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+padding:15px 20px;
+flex-direction:column;
+gap:12px;
+}
+
+nav h2{
+font-size:28px;
+}
+
+nav div{
+gap:18px;
+}
+
+.contact-hero{
+height:50vh;
+}
+
+.contact-hero h1{
+font-size:42px;
+}
+
+.contact-section{
+padding:60px 20px;
+}
+
+.contact-info h2{
+font-size:34px;
+}
+
+.contact-image img{
+height:350px;
+}
+
+.contact-form-box{
+margin:0 20px 70px;
+padding:30px 20px;
+}
+
+.contact-form-box h2{
+font-size:30px;
+}
+
+}
+
+</style>
+
+<script>
+
+function sendWhatsApp(){
+
+let name=document.getElementById("name").value.trim();
+
+let phone=document.getElementById("phone").value.trim();
+
+let pet=document.getElementById("pet").value;
+
+let message=document.getElementById("message").value.trim();
+
+if(name==="" || phone==="" || pet==="" || message===""){
+
+alert("Please fill all details 🐾");
+
+return;
+
+}
+
+let whatsappMessage=
+
+"🐾 *NEW PAWHAVEN ADOPTION REQUEST* 🐾%0A%0A"+
+
+"━━━━━━━━━━━━━━━%0A%0A"+
+
+"👤 *Name:* "+name+"%0A%0A"+
+
+"📞 *Phone:* "+phone+"%0A%0A"+
+
+"🐶 *Pet:* "+pet+"%0A%0A"+
+
+"💬 *Message:* %0A"+message+"%0A%0A"+
+
+"━━━━━━━━━━━━━━━%0A"+
+
+"❤️ PawHaven Pet Adoption";
+
+window.open(
+
+"https://wa.me/917262028686?text="+whatsappMessage,
+
+"_blank"
+
+);
+
+setTimeout(function(){
+
+alert(
+
+"✅ Adoption Request Sent Successfully ❤️\n\n"+
+
+"Thank you "+name+" for contacting PawHaven 🐾\n\n"+
+
+"We received your request for "+pet+" 🐶🐱\n\n"+
+
+"Our team will contact you soon on:\n"+phone
+
+);
+
+},1000);
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h2>🐾 PawHaven</h2>
+
+<div>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="contact-hero">
+
+<h1>Find Your Perfect Companion 🐾</h1>
+
+</section>
+
+<!-- CONTACT INFO -->
+
+<section class="contact-section">
+
+<div class="contact-info">
+
+<h2>Let’s Find Your Forever Friend ❤️</h2>
+
+<p>
+
+Every pet deserves love, care, and a safe home.
+
+At PawHaven, we help adorable pets find caring
+families who will give them a beautiful life.
+
+</p>
+
+<p>
+
+Fill out the adoption form and our team
+will connect with you soon regarding your
+future furry companion 🐶🐱
+
+</p>
+
+</div>
+
+<div class="contact-image">
+
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+
+</div>
+
+</section>
+
+<!-- FORM -->
+
+<div class="contact-form-box">
+
+<h2>Adoption Request Form 🐾</h2>
+
+<form class="contact-form"
+onsubmit="sendWhatsApp(); return false;">
+
+<input
+type="text"
+id="name"
+placeholder="👤 Your Full Name"
+required>
+
+<input
+type="tel"
+id="phone"
+placeholder="📞 Phone Number"
+required>
+
+<select id="pet" required>
+
+<option value="">Select Pet</option>
+
+<option>Rocky</option>
+<option>Lucy</option>
+<option>Daisy</option>
+<option>Max</option>
+<option>Leo</option>
+<option>Kitty</option>
+<option>Milo</option>
+<option>Simba</option>
+
+</select>
+
+<textarea
+id="message"
+rows="5"
+placeholder="💬 Why do you want to adopt this pet?"
+required></textarea>
+
+<button type="submit">
+
+Send Adoption Request ❤️
+
+</button>
+
+</form>
+
+</div>
+
+<!-- FOOTER -->
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- ABOUT -->
+        <div class="footer-box">
+            <h2 class="logo">🐾 PawHaven</h2>
+
+            <p>
+                Helping adorable pets find safe, loving,
+                and happy forever homes.
+            </p>
+
+            <p class="quote">
+                “Adopt Don’t Shop ❤️”
+            </p>
+
+            <!-- SOCIAL ICONS -->
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#">Adopt Pets</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+            <h3>Contact</h3>
+
+            <p>📧 pawhaven@gmail.com</p>
+            <p>📞 +917262028686 </p>
+            <p>📍 Pune, Maharashtra, India</p>
+
+            <button class="donate-btn">
+                Donate for Pets
+            </button>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        © 2026 PawHaven | All Rights Reserved
+    </div>
+
+</footer>
+
+<!-- FONT AWESOME ICONS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AUTO SELECT PET -->
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const pet = params.get("pet");
+
+if(pet){
+
+document.getElementById("pet").value = pet;
+
+}
+
+</script>
+
+</body>
+</html>

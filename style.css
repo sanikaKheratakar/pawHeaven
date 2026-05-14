@@ -1,0 +1,468 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
+
+html,body{
+  width:100%;
+  overflow-x:hidden;
+  background:#f5f7fb;
+  color:#333;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+  width:100%;
+  padding:18px 55px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(90deg,#ff7e5f,#feb47b);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+nav h2{
+  color:white;
+  font-size:30px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+nav div{
+  display:flex;
+  gap:28px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:500;
+  position:relative;
+  transition:0.3s;
+}
+
+nav a::after{
+  content:'';
+  position:absolute;
+  width:0%;
+  height:2px;
+  left:0;
+  bottom:-6px;
+  background:white;
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* ================= SECTION ================= */
+
+section{
+  padding:70px 25px;
+}
+
+/* ================= PET CARD ================= */
+
+.pet-profile-card{
+  max-width:1050px;
+  margin:auto;
+  background:white;
+  border-radius:28px;
+  overflow:hidden;
+  display:flex;
+  flex-wrap:wrap;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* IMAGE SIDE */
+
+.pet-image-box{
+  flex:1;
+  min-width:320px;
+  background:#fff7f5;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:35px;
+}
+
+.pet-card-img{
+  width:100%;
+  max-width:380px;
+  height:470px;
+  object-fit:cover;
+  border-radius:24px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+  transition:0.4s;
+}
+
+.pet-card-img:hover{
+  transform:scale(1.03);
+}
+
+/* CONTENT SIDE */
+
+.pet-card-content{
+  flex:1;
+  min-width:320px;
+  padding:50px 45px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.pet-card-content h2{
+  font-size:38px;
+  color:#222;
+  margin-bottom:20px;
+  line-height:1.4;
+}
+
+.pet-card-desc{
+  font-size:16px;
+  line-height:2;
+  color:#555;
+  margin-bottom:30px;
+}
+
+/* INFO BOX */
+
+.pet-info{
+  background:#fff7f5;
+  padding:28px;
+  border-radius:18px;
+  margin-bottom:35px;
+}
+
+.pet-info p{
+  margin-bottom:16px;
+  line-height:1.9;
+  color:#555;
+  font-size:15px;
+}
+
+.pet-info p:last-child{
+  margin-bottom:0;
+}
+
+/* BUTTON */
+
+.adopt-btn{
+  display:block;
+  width:230px;
+  margin:auto;
+  text-align:center;
+  padding:15px 24px;
+  background:linear-gradient(90deg,#ff7e5f,#ff6f61);
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.adopt-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(255,111,97,0.3);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+  margin-top:70px;
+}
+
+footer p{
+  font-size:15px;
+  letter-spacing:0.5px;
+  color:#f1f1f1;
+}
+
+/* ================= IMAGES ================= */
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+nav{
+  padding:16px 20px;
+  flex-direction:column;
+  gap:12px;
+}
+
+nav h2{
+  font-size:26px;
+}
+
+nav div{
+  gap:18px;
+}
+
+section{
+  padding:50px 18px;
+}
+
+.pet-profile-card{
+  flex-direction:column;
+}
+
+.pet-image-box{
+  padding:25px;
+}
+
+.pet-card-img{
+  max-width:100%;
+  height:360px;
+}
+
+.pet-card-content{
+  padding:30px 25px;
+}
+
+.pet-card-content h2{
+  font-size:30px;
+  text-align:center;
+}
+
+.pet-card-desc{
+  text-align:center;
+}
+
+.adopt-btn{
+  width:100%;
+}
+
+footer{
+  padding:28px 15px;
+}
+
+}
+/* ADOPT BUTTON */
+
+.adopt-btn{
+
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+
+background:linear-gradient(90deg,#ff7e5f,#ff6f61);
+
+color:white;
+text-decoration:none;
+
+font-size:17px;
+font-weight:600;
+
+border-radius:14px;
+
+transition:0.3s;
+
+box-shadow:0 10px 25px rgba(255,111,97,0.25);
+
+}
+
+.adopt-btn:hover{
+
+transform:translateY(-3px);
+opacity:0.92;
+
+}/* ================= FOOTER ================= */
+
+.footer{
+    background:#1f1f1f;
+    color:white;
+    padding:50px 20px 20px;
+    margin-top:60px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.footer-box{
+    flex:1;
+    min-width:250px;
+}
+
+.logo{
+    color:#ff6f61;
+    margin-bottom:15px;
+}
+
+.footer-box h3{
+    margin-bottom:15px;
+    color:#ff6f61;
+}
+
+.footer-box p{
+    line-height:1.8;
+    font-size:15px;
+}
+
+.quote{
+    margin-top:10px;
+    color:#ffd166;
+    font-style:italic;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:10px;
+    transition:0.3s;
+}
+
+.footer-box a:hover{
+    color:#ff6f61;
+    padding-left:5px;
+}
+
+/* SOCIAL ICONS */
+
+.social-icons{
+    margin-top:20px;
+}
+
+.social-icons a{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    border-radius:50%;
+    background:#ff6f61;
+    color:white;
+    margin-right:10px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    transform:scale(1.1);
+    background:white;
+    color:#ff6f61;
+}
+
+/* DONATE BUTTON */
+
+.donate-btn{
+    margin-top:15px;
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    background:#ff6f61;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.donate-btn:hover{
+    background:white;
+    color:#ff6f61;
+}
+
+/* FOOTER BOTTOM */
+
+.footer-bottom{
+    text-align:center;
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.footer-container{
+    flex-direction:column;
+    text-align:center;
+}
+
+.social-icons{
+    justify-content:center;
+}
+
+}
+/* ================= REVIEWS ================= */
+
+.reviews{
+    padding:80px 8%;
+    background:#fff7f5;
+}
+
+.review-title{
+    text-align:center;
+    font-size:42px;
+    color:#ff6f61;
+    margin-bottom:50px;
+}
+
+.review-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.review-card{
+    background:white;
+    border-radius:22px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.review-card:hover{
+    transform:translateY(-10px);
+}
+
+.review-img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #ffd2cc;
+    margin-bottom:18px;
+}
+
+.review-card h3{
+    font-size:24px;
+    color:#333;
+    margin-bottom:10px;
+}
+
+.stars{
+    color:gold;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.review-card p{
+    color:#666;
+    line-height:1.7;
+    font-size:15px;
+}
